@@ -43,12 +43,6 @@
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Droid\LightWallet.Droid.csproj">
-      <Project>{0CAFF3E9-1260-4BC9-9042-7FDE66DD084D}</Project>
-      <Name>LightWallet.Droid</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests.cs" />

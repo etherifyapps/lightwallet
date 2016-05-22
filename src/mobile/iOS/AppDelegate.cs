@@ -19,7 +19,7 @@ namespace Etherify.LightWallet.iOS
 			Xamarin.Calabash.Start();
 			#endif
 
-			LoadApplication (new App ());
+			LoadApplication (new App () as Xamarin.Forms.Application);
 
 			return base.FinishedLaunching (app, options);
 		}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+	prism:ViewModelLocator.AutowireViewModel="True"
+	x:Class="Etherify.LightWallet.Views.FirstAccessPage">
+	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+		<Label Text ="FirstAccessPage" />
+    	<Button Text="Create New Wallet" Command="{Binding CreateNewWalletCommand}" />
+    	<Button Text="Recovery My Wallet" Command="{Binding RecoveryMyWalletCommand}" />
+	</StackLayout>
+</ContentPage>
