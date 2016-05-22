@@ -31,21 +31,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\FirstAccessPageViewModel.cs" />
-    <Compile Include="Views\FirstAccessPage.xaml.cs">
-      <DependentUpon>FirstAccessPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\ConnectingEthereumPage.xaml.cs">
-      <DependentUpon>ConnectingEthereumPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\CreateNewWalletPage.xaml.cs">
-      <DependentUpon>CreateNewWalletPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\ConnectingEthereumPageViewModel.cs" />
     <Compile Include="App.cs" />
-    <Compile Include="ViewModels\CreateNewWalletPageViewModel.cs" />
     <Compile Include="Base\ViewModels\EtherifyBaseViewModel.cs" />
     <Compile Include="Base\ViewModels\EtherifyViewModelWithBack.cs" />
+    <Compile Include="Views\P01_FirstAccessPage.xaml.cs">
+      <DependentUpon>P01_FirstAccessPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\P01_FirstAccessPageViewModel.cs" />
+    <Compile Include="Views\P02A_CreateNewWalletPage.xaml.cs">
+      <DependentUpon>P02A_CreateNewWalletPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\P03A_ConnectingEthereumPage.xaml.cs">
+      <DependentUpon>P03A_ConnectingEthereumPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\P03A_ConnectingEthereumPageViewModel.cs" />
+    <Compile Include="ViewModels\P02A_CreateNewWalletPageViewModel.cs" />
+    <Compile Include="Views\P02B_ShowWalletMasterKeyPage.xaml.cs">
+      <DependentUpon>P02B_ShowWalletMasterKeyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\P02C_WelcomeNewWalletPage.xaml.cs">
+      <DependentUpon>P02C_WelcomePageNewWallet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\P02C_WelcomeNewWalletPageViewModel.cs" />
+    <Compile Include="ViewModels\P02B_ShowWalletMasterKeyPageViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.34-pre1\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.34-pre1\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -94,13 +102,19 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <EmbeddedResource Include="Views\FirstAccessPage.xaml">
+    <EmbeddedResource Include="Views\P01_FirstAccessPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ConnectingEthereumPage.xaml">
+    <EmbeddedResource Include="Views\P02A_CreateNewWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CreateNewWalletPage.xaml">
+    <EmbeddedResource Include="Views\P03A_ConnectingEthereumPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P02B_ShowWalletMasterKeyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P02C_WelcomePageNewWallet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
