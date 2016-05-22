@@ -25,6 +25,7 @@ namespace Etherify.LightWallet
 
 			Container.RegisterTypeForNavigation<ConnectingEthereumPage> ();
 
+			Container.RegisterTypeForNavigation<MainMenuPage> ();
 		}
 
 		#endregion

@@ -13,7 +13,7 @@ namespace Etherify.LightWallet.ViewModels
 
 		public ConnectingEthereumPageViewModel (INavigationService navigationService) : base(navigationService)
 		{
-			//_nextCommand = new DelegateCommand (() => _navigationService.NavigateAsync (typeof(ConnectingEthereumPage).Name));
+			//NextCommand = new DelegateCommand (() => _navigationService.NavigateAsync (typeof(MainMenuPage).Name));
 		}
 	}
 }

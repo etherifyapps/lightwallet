@@ -35,9 +35,8 @@
     <Compile Include="Base\ViewModels\EtherifyBaseViewModel.cs" />
     <Compile Include="Base\ViewModels\EtherifyViewModelWithBack.cs" />
     <Compile Include="Views\P01_FirstAccessPage.xaml.cs">
-      <DependentUpon>P01_FirstAccessPage.xaml</DependentUpon>
+      <DependentUpon>P01A_FirstAccessPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\P01_FirstAccessPageViewModel.cs" />
     <Compile Include="Views\P02A_CreateNewWalletPage.xaml.cs">
       <DependentUpon>P02A_CreateNewWalletPage.xaml</DependentUpon>
     </Compile>
@@ -54,6 +53,11 @@
     </Compile>
     <Compile Include="ViewModels\P02C_WelcomeNewWalletPageViewModel.cs" />
     <Compile Include="ViewModels\P02B_ShowWalletMasterKeyPageViewModel.cs" />
+    <Compile Include="ViewModels\P01A_FirstAccessPageViewModel.cs" />
+    <Compile Include="Views\P04A_MainMenuPage.xaml.cs">
+      <DependentUpon>P04A_MainMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\P04A_MainMenuPageViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.34-pre1\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.34-pre1\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -102,9 +106,6 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <EmbeddedResource Include="Views\P01_FirstAccessPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\P02A_CreateNewWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -115,6 +116,12 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\P02C_WelcomePageNewWallet.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P01A_FirstAccessPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P04A_MainMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
