@@ -10,7 +10,7 @@
         <ContentPage Title="title">
 			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 	            <Label Text=" " FontSize="30"/>
-	            <ListView HasUnevenRows="true" SeparatorColor="#ddd" ItemsSource="{Binding MenuItems}">
+	            <ListView HasUnevenRows="true" SeparatorColor="#ddd" ItemsSource="{Binding MenuItems}" >
 					<ListView.ItemTemplate>
 		                <DataTemplate>
 		                    <ViewCell>
