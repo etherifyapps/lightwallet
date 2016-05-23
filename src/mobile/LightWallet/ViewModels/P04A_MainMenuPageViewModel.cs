@@ -7,6 +7,8 @@ using Etherify.LightWallet.Views;
 
 namespace Etherify.LightWallet.ViewModels
 {
+	//https://www.syntaxismyui.com/xamarin-forms-masterdetail-page-navigation-recipe/
+
 	public class AppMenuItem
 	{
 		public int Index { get; set; }
