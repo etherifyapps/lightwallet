@@ -45,13 +45,15 @@ namespace Etherify.LightWallet.ViewModels
 			MenuItemsSource [0] = new AppMenuItem () { 
 				Title = "Accounts", 
 				//IconSource = "accounts.png", 
-				DestinationPageId = typeof(AccountsPage).Name
+				DestinationPageId =  //typeof(MainMenuPage).Name + "/" +
+					typeof(DefaultNavigationPage).Name + "/" + typeof(AccountsPage).Name
 			};
 
 			MenuItemsSource [1] = new AppMenuItem () { 
 				Title = "Settings", 
 				//IconSource = "settings.png", 
-				DestinationPageId = typeof(WelcomeNewWalletPage).Name
+				DestinationPageId =  //typeof(MainMenuPage).Name + "/" + 
+					typeof(DefaultNavigationPage).Name + "/" + typeof(SettingsPage).Name
 			};
 		}
 

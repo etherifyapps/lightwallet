@@ -13,7 +13,10 @@ namespace Etherify.LightWallet.ViewModels
 
 		public WelcomeRecoveryWalletPageViewModel (INavigationService navigationService) : base(navigationService)
 		{
-			OkCommand = new DelegateCommand (() => _navigationService.NavigateAsync (typeof(MainMenuPage).Name));
+			//TODO Go to the P07A_SearchExistentAccountsPage and start the scan
+
+			OkCommand = new DelegateCommand (() => 
+				_navigationService.NavigateAsync ("MainMenuPage/DefaultNavigationPage/AccountsPage"));
 		}
 	}
 }

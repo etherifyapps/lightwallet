@@ -7,11 +7,11 @@ using Etherify.LightWallet.Views;
 
 namespace Etherify.LightWallet.ViewModels
 {
-	public class AccountsPageViewModel : EtherifyBaseViewModel
+	public class SearchExistentAccountsPage : EtherifyBaseViewModel
 	{
 		//public DelegateCommand OkCommand { get; set; }
 
-		public AccountsPageViewModel (INavigationService navigationService) : base(navigationService)
+		public SearchExistentAccountsPage (INavigationService navigationService) : base(navigationService)
 		{
 			//OkCommand = new DelegateCommand (() => _navigationService.NavigateAsync (typeof(MainMenuPage).Name));
 		}

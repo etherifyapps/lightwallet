@@ -10,7 +10,7 @@
 	<MasterDetailPage.Master>
         <ContentPage Title="Menu" Padding="5, 25" BackgroundColor="#eee">
 			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-	            <Label Text="Menu" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+	            <Label Text="Etherify" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
 	            <ListView 
 	            	HasUnevenRows="true" 
 	            	BackgroundColor="#eee"
@@ -32,7 +32,4 @@
 			</StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
-    <MasterDetailPage.Detail>
-		<view:AccountsPage />
-    </MasterDetailPage.Detail>
 </MasterDetailPage>

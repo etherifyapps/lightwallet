@@ -9,6 +9,8 @@ namespace Etherify.LightWallet.Base.ViewModels
 	{
 		public INavigationService _navigationService;
 
+		public static string BASE_NAVIGATION_URI = "MainMenuPage/DefaultNavigationPage/";
+
 		public EtherifyBaseViewModel (INavigationService navigationService)
 		{
 			_navigationService = navigationService;

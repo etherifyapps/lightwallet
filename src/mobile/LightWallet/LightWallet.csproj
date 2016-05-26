@@ -66,10 +66,22 @@
     <Compile Include="Views\P03C_WelcomeRecoveryWalletPage.xaml.cs">
       <DependentUpon>P03C_WelcomeRecoveryWalletPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\P04B_AccountsPage.xaml.cs">
-      <DependentUpon>P04B_AccountsPage.xaml</DependentUpon>
+    <Compile Include="Views\P04B_DefaultNavigationPage.xaml.cs">
+      <DependentUpon>P04B_DefaultNavigationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\P04B_AccountsPageViewModel.cs" />
+    <Compile Include="Views\P04C_AccountsPage.xaml.cs">
+      <DependentUpon>P04C_AccountsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\P09A_SettingsPage.xaml.cs">
+      <DependentUpon>P09A_SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\P04B_DefaultNavigationPageViewModel.cs" />
+    <Compile Include="ViewModels\P04C_AccountsPageViewModel.cs" />
+    <Compile Include="ViewModels\P09A_SettingsPageViewModel.cs" />
+    <Compile Include="Views\P07A_SearchExistentAccountsPage.xaml.cs">
+      <DependentUpon>P07A_SearchExistentAccountsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\P07A_SearchExistentAccountsPage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.34-pre1\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.34-pre1\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -142,7 +154,16 @@
     <EmbeddedResource Include="Views\P03C_WelcomeRecoveryWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\P04B_AccountsPage.xaml">
+    <EmbeddedResource Include="Views\P04B_DefaultNavigationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P04C_AccountsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P09A_SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\P07A_SearchExistentAccountsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

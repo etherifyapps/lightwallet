@@ -14,7 +14,11 @@ namespace Etherify.LightWallet
 		{
 			//NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
 
-			NavigationService.NavigateAsync (typeof(MainMenuPage).Name);
+			//NavigationService.NavigateAsync (typeof(MainMenuPage).Name);
+
+			NavigationService.NavigateAsync ("MainMenuPage/DefaultNavigationPage/AccountsPage");
+			//NavigationService.NavigateAsync ("MainMenuPage/DefaultNavigationPage/SettingsPage");
+
 
 			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
 			//NavigationService.NavigateAsync ("FirstAccessPage/ConnectingEthereumPage/RecoveryHDWalletPage/WelcomeRecoveryWalletPage/");
@@ -33,7 +37,14 @@ namespace Etherify.LightWallet
 			Container.RegisterTypeForNavigation<WelcomeRecoveryWalletPage> ();
 
 			Container.RegisterTypeForNavigation<MainMenuPage> ();
+			Container.RegisterTypeForNavigation<DefaultNavigationPage> ();
+
 			Container.RegisterTypeForNavigation<AccountsPage> ();
+			Container.RegisterTypeForNavigation<SearchExistentAccountsPage> ();
+
+
+			Container.RegisterTypeForNavigation<SettingsPage> ();
+
 		}
 
 		#endregion
