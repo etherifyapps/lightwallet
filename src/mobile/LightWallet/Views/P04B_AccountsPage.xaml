@@ -4,10 +4,9 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.ConnectingEthereumPage">
+	x:Class="Etherify.LightWallet.Views.AccountsPage">
 	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-		<Label Text ="ConnectingEthereumPage" />
-		<Button Text="Back" Command="{Binding BackCommand}" />
-    	<Button Text="Next" Command="{Binding NextCommand}" />
+		<Label Text ="AccountsPage" />
+    	<Button Text="Ok"  Command="{Binding OkCommand}"/>
 	</StackLayout>
 </ContentPage>

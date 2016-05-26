@@ -4,19 +4,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
+	xmlns:view="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
 	x:Class="Etherify.LightWallet.Views.MainMenuPage"
 	IsPresented="true">
 	<MasterDetailPage.Master>
-        <ContentPage Title="title">
+        <ContentPage Title="Menu">
 			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-	            <Label Text=" " FontSize="30"/>
-	            <ListView HasUnevenRows="true" SeparatorColor="#ddd" ItemsSource="{Binding MenuItems}" >
+	            <Label Text="Menu" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+	            <ListView 
+	            	HasUnevenRows="true" 
+	            	SeparatorColor="#ddd" 
+	            	ItemsSource="{Binding MenuItemsSource}" 
+	            	SelectedItem="{Binding MenuItemSelected}">
 					<ListView.ItemTemplate>
 		                <DataTemplate>
 		                    <ViewCell>
 		                        <StackLayout BackgroundColor="#eee" Orientation="Vertical">
 		                            <StackLayout Orientation="Horizontal">
-		                                <Label Text="{Binding Text}" TextColor="#f35e20" />
+		                                <Label Text="{Binding Title}" TextColor="#f35e20" />
 		                            </StackLayout>
 		                        </StackLayout>
 		                    </ViewCell>
@@ -27,10 +32,6 @@
         </ContentPage>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
-        <ContentPage>
-			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-				<Label Text ="Detail" />
-			</StackLayout>
-        </ContentPage>
+		<view:AccountsPage />
     </MasterDetailPage.Detail>
 </MasterDetailPage>

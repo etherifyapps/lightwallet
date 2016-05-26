@@ -4,99 +4,57 @@ using Prism.Commands;
 using Prism.Navigation;
 using Etherify.LightWallet.Base.ViewModels;
 using Etherify.LightWallet.Views;
+using Xamarin.Forms;
 
 namespace Etherify.LightWallet.ViewModels
 {
 	//https://www.syntaxismyui.com/xamarin-forms-masterdetail-page-navigation-recipe/
 
-	public class AppMenuItem
+	public class AppMenuItem 
 	{
-		public int Index { get; set; }
-		public string Text { get; set; }
+		public string Title { get; set; }
+		public string IconSource { get; set; }
+		public string DestinationPageId { get; set; }
 	}
 
 	public class MainMenuPageViewModel : EtherifyBaseViewModel
 	{
-		public DelegateCommand MenuItemSelectedCommand { get; set; }
-
 		public DelegateCommand AccountsCommand { get; set; }
 		public DelegateCommand SettingsCommand { get; set; }
 
-		public AppMenuItem[] MenuItems { get; set; }
+		public AppMenuItem[] MenuItemsSource { get; set; }
+
+		private  AppMenuItem _menuItemSelected;
+		public AppMenuItem MenuItemSelected {
+			get {
+				return _menuItemSelected;
+			}
+			set {
+				if (_menuItemSelected != value) {
+					_menuItemSelected = value;
+
+					this._navigationService.NavigateAsync (_menuItemSelected.DestinationPageId);
+				}
+			}
+		}
+
 
 		public MainMenuPageViewModel (INavigationService navigationService) : base(navigationService)
 		{
-			MenuItems = new AppMenuItem[2];
-			MenuItems [0] = new AppMenuItem { Index = 0, Text = "Accounts" };
-			MenuItems [1] = new AppMenuItem { Index = 1, Text = "Settings" };
+			MenuItemsSource = new AppMenuItem[2];
+			MenuItemsSource [0] = new AppMenuItem () { 
+				Title = "Accounts", 
+				//IconSource = "accounts.png", 
+				DestinationPageId = typeof(AccountsPage).Name
+			};
 
-			/*
-			MenuItemSelectedCommand = new DelegateCommand ((sender, args) =>
-				{
-					var menuItem = args.SelectedItem as MenuItem;
-
-					switch (menuItem.Index) 
-					{
-					case 0: 
-						RootPage.Detail = new NavigationPage(new AccountsPage()) 
-						{
-							BarBackgroundColor = AppStyle.BackgroundColor,
-							BarTextColor = Color.White
-						};
-						RootPage.IsPresented = false;
-						break;
-					case 1:
-						RootPage.Detail = new NavigationPage(new ProfilePage()) 
-						{
-							BarBackgroundColor = AppStyle.BackgroundColor,
-							BarTextColor = Color.White
-						};
-						RootPage.IsPresented = false;
-						break;
-					case 2:
-						RootPage.IsPresented = false;
-						Logout();
-						break;
-					}
-
-					return;
-				}			
-			);
-			*/
+			MenuItemsSource [1] = new AppMenuItem () { 
+				Title = "Settings", 
+				//IconSource = "settings.png", 
+				DestinationPageId = typeof(WelcomeNewWalletPage).Name
+			};
 		}
 
-		/*
-		public void MenuItemSelected() {
-		{
-			var menuItem = args.SelectedItem as MenuItem;
-
-			switch (menuItem.Index) 
-			{
-				case 0: 
-					RootPage.Detail = new NavigationPage(new AccountsPage()) 
-					{
-						BarBackgroundColor = AppStyle.BackgroundColor,
-						BarTextColor = Color.White
-					};
-					RootPage.IsPresented = false;
-					break;
-				case 1:
-					RootPage.Detail = new NavigationPage(new ProfilePage()) 
-					{
-						BarBackgroundColor = AppStyle.BackgroundColor,
-						BarTextColor = Color.White
-					};
-					RootPage.IsPresented = false;
-					break;
-				case 2:
-					RootPage.IsPresented = false;
-					Logout();
-					break;
-			}
-
-			return;
-		}
-				*/
 	}
 }
 

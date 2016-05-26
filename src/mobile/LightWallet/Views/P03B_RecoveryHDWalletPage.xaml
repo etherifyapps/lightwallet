@@ -4,10 +4,10 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.ConnectingEthereumPage">
+	x:Class="Etherify.LightWallet.Views.RecoveryHDWalletPage">
 	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-		<Label Text ="ConnectingEthereumPage" />
-		<Button Text="Back" Command="{Binding BackCommand}" />
-    	<Button Text="Next" Command="{Binding NextCommand}" />
+		<Label Text ="RecoveryHDWalletPage" />
+		<Button Text="RecoveryNow" Command="{Binding RecoveryNowCommand}" />
+    	<Button Text="Cancel" Command="{Binding CancelCommand}" />
 	</StackLayout>
 </ContentPage>

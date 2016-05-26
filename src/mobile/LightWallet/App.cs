@@ -12,7 +12,12 @@ namespace Etherify.LightWallet
 
 		protected override void OnInitialized ()
 		{
-			NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
+			//NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
+
+			NavigationService.NavigateAsync (typeof(MainMenuPage).Name);
+
+			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
+			//NavigationService.NavigateAsync ("FirstAccessPage/ConnectingEthereumPage/RecoveryHDWalletPage/WelcomeRecoveryWalletPage/");
 		}
 
 		protected override void RegisterTypes ()
@@ -24,8 +29,11 @@ namespace Etherify.LightWallet
 			Container.RegisterTypeForNavigation<WelcomeNewWalletPage> ();
 
 			Container.RegisterTypeForNavigation<ConnectingEthereumPage> ();
+			Container.RegisterTypeForNavigation<RecoveryHDWalletPage> ();
+			Container.RegisterTypeForNavigation<WelcomeRecoveryWalletPage> ();
 
 			Container.RegisterTypeForNavigation<MainMenuPage> ();
+			Container.RegisterTypeForNavigation<AccountsPage> ();
 		}
 
 		#endregion
