@@ -34,39 +34,9 @@
     <Compile Include="App.cs" />
     <Compile Include="Base\ViewModels\EtherifyBaseViewModel.cs" />
     <Compile Include="Base\ViewModels\EtherifyViewModelWithBack.cs" />
-    <Compile Include="Views\P04A_MainMenuPage.xaml.cs">
-      <DependentUpon>P04A_MainMenuPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\P04A_MainMenuPageViewModel.cs" />
-    <Compile Include="Views\P04B_DefaultNavigationPage.xaml.cs">
-      <DependentUpon>P04B_DefaultNavigationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\P09A_SettingsPage.xaml.cs">
-      <DependentUpon>P09A_SettingsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\P04B_DefaultNavigationPageViewModel.cs" />
     <Compile Include="ViewModels\P09A_SettingsPageViewModel.cs" />
-    <Compile Include="Views\FirstAccess\P01_FirstAccessPage.xaml.cs">
-      <DependentUpon>P01A_FirstAccessPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstAccess\P02A_CreateNewWalletPage.xaml.cs">
-      <DependentUpon>P02A_CreateNewWalletPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstAccess\P02B_ShowWalletMasterKeyPage.xaml.cs">
-      <DependentUpon>P02B_ShowWalletMasterKeyPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstAccess\P02C_WelcomeNewWalletPage.xaml.cs">
-      <DependentUpon>P02C_WelcomePageNewWallet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstAccess\P03A_ConnectingEthereumPage.xaml.cs">
-      <DependentUpon>P03A_ConnectingEthereumPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstAccess\P03B_RecoveryHDWalletPage.xaml.cs">
-      <DependentUpon>P03B_RecoveryHDWalletPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstAccess\P03C_WelcomeRecoveryWalletPage.xaml.cs">
-      <DependentUpon>P03C_WelcomeRecoveryWalletPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\FirstAccess\P01A_FirstAccessPageViewModel.cs" />
     <Compile Include="ViewModels\FirstAccess\P02A_CreateNewWalletPageViewModel.cs" />
     <Compile Include="ViewModels\FirstAccess\P02B_ShowWalletMasterKeyPageViewModel.cs" />
@@ -77,10 +47,40 @@
     <Compile Include="ViewModels\Accounts\P04C_AccountsPageViewModel.cs" />
     <Compile Include="ViewModels\Accounts\P07A_SearchExistentAccountsPage.cs" />
     <Compile Include="Views\Accounts\P04C_AccountsPage.xaml.cs">
-      <DependentUpon>P04C_AccountsPage.xaml</DependentUpon>
+      <DependentUpon>AccountsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Accounts\P07A_SearchExistentAccountsPage.xaml.cs">
-      <DependentUpon>P07A_SearchExistentAccountsPage.xaml</DependentUpon>
+      <DependentUpon>SearchExistentAccountsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DefaultNavigationPage.xaml.cs">
+      <DependentUpon>DefaultNavigationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\FirstAccessPage.xaml.cs">
+      <DependentUpon>FirstAccessPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\CreateNewWalletPage.xaml.cs">
+      <DependentUpon>CreateNewWalletPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\ShowWalletMasterKeyPage.xaml.cs">
+      <DependentUpon>ShowWalletMasterKeyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\WelcomeNewWalletPage.xaml.cs">
+      <DependentUpon>WelcomePageNewWallet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\ConnectingEthereumPage.xaml.cs">
+      <DependentUpon>ConnectingEthereumPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\RecoveryHDWalletPage.xaml.cs">
+      <DependentUpon>RecoveryHDWalletPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstAccess\WelcomeRecoveryWalletPage.xaml.cs">
+      <DependentUpon>WelcomeRecoveryWalletPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuPage.xaml.cs">
+      <DependentUpon>MainMenuPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -134,40 +134,40 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <EmbeddedResource Include="Views\P04A_MainMenuPage.xaml">
+    <EmbeddedResource Include="Views\SettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\P04B_DefaultNavigationPage.xaml">
+    <EmbeddedResource Include="Views\DefaultNavigationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\P09A_SettingsPage.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\FirstAccessPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P01A_FirstAccessPage.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\CreateNewWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P02A_CreateNewWalletPage.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\ShowWalletMasterKeyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P02B_ShowWalletMasterKeyPage.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\WelcomePageNewWallet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P02C_WelcomePageNewWallet.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\ConnectingEthereumPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P03A_ConnectingEthereumPage.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\RecoveryHDWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P03B_RecoveryHDWalletPage.xaml">
+    <EmbeddedResource Include="Views\FirstAccess\WelcomeRecoveryWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FirstAccess\P03C_WelcomeRecoveryWalletPage.xaml">
+    <EmbeddedResource Include="Views\MainMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Accounts\P04C_AccountsPage.xaml">
+    <EmbeddedResource Include="Views\Accounts\AccountsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Accounts\P07A_SearchExistentAccountsPage.xaml">
+    <EmbeddedResource Include="Views\Accounts\SearchExistentAccountsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
