@@ -10,7 +10,9 @@
 	<MasterDetailPage.Master>
         <ContentPage Title="Menu" Padding="5, 25" BackgroundColor="#eee">
 			<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-	            <Label Text="Etherify" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+				<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+		            <Label Text="Etherify" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" />
+				</StackLayout>
 	            <ListView 
 	            	HasUnevenRows="true" 
 	            	BackgroundColor="#eee"

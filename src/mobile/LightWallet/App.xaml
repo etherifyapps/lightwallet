@@ -1,0 +1,28 @@
+﻿<prism:PrismApplication
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Etherify.LightWallet.App"
+	xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Forms">
+    <Application.Resources>
+		<ResourceDictionary>
+        	<Color x:Key="darkPrimaryColor">#512DA8</Color>
+
+        	<Color x:Key="defaultPrimaryColor">#673AB7</Color>
+        	<Color x:Key="lightPrimaryColor">#D1C4E9</Color>
+        	<Color x:Key="textPrimaryColor">#FFFFFF</Color>
+        	<Color x:Key="accentColor">#E040FB</Color>
+        	<Color x:Key="primaryTextColor">#212121</Color>
+        	<Color x:Key="secondaryTextColor">#727272</Color>
+        	<Color x:Key="dividerColor">#B6B6B6</Color>
+
+			<Style x:Key="navigationPageStyle" TargetType="NavigationPage">
+            	<Setter Property="BarTextColor" Value="{DynamicResource textPrimaryColor}" />
+            	<Setter Property="BarBackgroundColor" Value="{DynamicResource defaultPrimaryColor}" />
+        	</Style>
+			<Style x:Key="navigationPageStyle2" TargetType="NavigationPage">
+            	<Setter Property="BarTextColor" Value="{DynamicResource textPrimaryColor}" />
+            	<Setter Property="BarBackgroundColor" Value="{DynamicResource defaultPrimaryColor}" />
+        	</Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

@@ -3,5 +3,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
     prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.AccountsNavigationPage">
+	x:Class="Etherify.LightWallet.Views.AccountsNavigationPage"
+	Style="{StaticResource navigationPageStyle}"
+	>
 </NavigationPage>
