@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Etherify.LightWallet.Views
 {
-	public partial class DefaultNavigationPage : NavigationPage
+	public partial class AccountsNavigationPage : NavigationPage
 	{
-		public DefaultNavigationPage ()
+		public AccountsNavigationPage ()
 		{
 			InitializeComponent ();
 		}

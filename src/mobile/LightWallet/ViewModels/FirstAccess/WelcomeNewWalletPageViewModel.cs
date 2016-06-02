@@ -14,8 +14,7 @@ namespace Etherify.LightWallet.ViewModels
 		public WelcomeNewWalletPageViewModel (INavigationService navigationService) : base(navigationService)
 		{
 			OkCommand = new DelegateCommand (() => 
-				_navigationService.NavigateAsync ("MainMenuPage/DefaultNavigationPage/AccountsPage"));
-
+				_navigationService.NavigateAsync ("MainMenuPage/AccountsNavigationPage/AccountsPage"));
 		}
 	}
 }
