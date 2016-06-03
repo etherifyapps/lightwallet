@@ -6,15 +6,17 @@ using Prism.Unity;
 
 namespace Etherify.LightWallet
 {
+	//Inherited of PrismApplication as defined in the App.xaml
 	public partial class App
 	{
 		#region implemented abstract members of PrismApplicationBase
 
 		protected override void OnInitialized ()
 		{
-			NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
+			//NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
 
 			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
+			NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
 
 
 			//used to jump to some page (development)
