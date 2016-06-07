@@ -11,6 +11,12 @@ namespace Etherify.LightWallet.ViewModels
 	{
 		public DelegateCommand NextCommand { get; set; }
 
+		public string Title { 
+			get { 
+				return LocalizeService.GetString ("CreateNewWalletPage_Title"); 
+			}
+		}
+
 		public CreateNewWalletPageViewModel (INavigationService navigationService) : base(navigationService)
 		{
 			NextCommand = new DelegateCommand (() => _navigationService.NavigateAsync (typeof(ShowWalletMasterKeyPage).Name));

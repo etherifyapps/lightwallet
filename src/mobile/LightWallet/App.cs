@@ -4,6 +4,9 @@ using Xamarin.Forms;
 using Etherify.LightWallet.Views;
 using Prism.Unity;
 
+using System.Reflection;
+using System.Resources;
+
 namespace Etherify.LightWallet
 {
 	//Inherited of PrismApplication as defined in the App.xaml
@@ -13,6 +16,10 @@ namespace Etherify.LightWallet
 
 		protected override void OnInitialized ()
 		{
+			if (Device.OS != TargetPlatform.WinPhone) {
+				DependencyService.Get<ILocalize> ().SetLocale ();
+			}
+
 			//NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
 
 			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");

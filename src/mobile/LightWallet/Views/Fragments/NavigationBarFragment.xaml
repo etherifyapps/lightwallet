@@ -7,5 +7,5 @@
 	Orientation="Horizontal" 
 	BackgroundColor="{DynamicResource defaultPrimaryColor}">
 	<Button Text="Back" Command="{Binding BackCommand}" HorizontalOptions="Start"/>
-	<Label Text ="Create New Wallet" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+	<Label Text ="{Binding Title}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
 </StackLayout>
