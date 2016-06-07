@@ -4,9 +4,11 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.AccountsPage">
+	x:Class="Etherify.LightWallet.Views.AccountsPage"
+	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
+	>
 	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
 		<Label Text ="AccountsPage" />
-    	<Button Text="Search for existent accounts"  Command="{Binding SearchExistentAccountsCommand}"/>
+    	<Button Text="{lightwallet:Translate Button_SearchForExistentAccounts}"  Command="{Binding SearchExistentAccountsCommand}"/>
 	</StackLayout>
 </ContentPage>
