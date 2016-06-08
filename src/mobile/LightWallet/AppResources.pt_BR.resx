@@ -26,6 +26,12 @@
 	<data name="FirstAccessPage_ButtonRecoveryMyWallet" xml:space="preserve">
 	    <value>Recuperar Minha Carteira</value>
 	</data>
+	<data name="FirstAccessPage_ButtonOpenTermsOfService" xml:space="preserve">
+	    <value>Termos de Uso</value>
+	</data>
+	<data name="FirstAccessPage_ButtonOpenGithub" xml:space="preserve">
+	    <value>Github</value>
+	</data>
 
 
 	<!-- CreateNewWalletPage -->

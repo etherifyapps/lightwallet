@@ -6,12 +6,33 @@
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.FirstAccessPage"
 	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
-	<StackLayout Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="Fuchsia">
+	<StackLayout Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 		<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}"/>
 		<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
-		<StackLayout Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="Lime">
+		<StackLayout Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 	    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonCreateNewWallet}" Command="{Binding CreateNewWalletCommand}"  />
 	    	<Button Style="{DynamicResource buttonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonRecoveryMyWallet}"  Command="{Binding RecoveryMyWalletCommand}" />
 		</StackLayout>
+		<Grid Style="{DynamicResource bottomGridStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+		    <Grid.RowDefinitions>
+		        <RowDefinition Height="Auto" />
+		    </Grid.RowDefinitions>
+		 
+		    <Grid.ColumnDefinitions>
+		        <ColumnDefinition Width="Auto" />
+		        <ColumnDefinition Width="*" />
+		        <ColumnDefinition Width="Auto" />
+		    </Grid.ColumnDefinitions>
+
+	    	<Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource linkTextStyle}" 
+	    		Text="{lightwallet:Translate FirstAccessPage_ButtonOpenTermsOfService}" 
+	    		HorizontalOptions="Start"
+	    		Command="{Binding OpenTermsOfServiceCommand}"  />
+	    	<Button Grid.Row="0" Grid.Column="2" Style="{DynamicResource linkTextStyle}" 
+	    		Text="{lightwallet:Translate FirstAccessPage_ButtonOpenGithub}"  
+	    		HorizontalOptions="End"
+	    		Command="{Binding OpenGithubCommand}" />
+		</Grid>
+
 	</StackLayout>
 </ContentPage>

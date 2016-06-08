@@ -26,6 +26,14 @@
 	<data name="FirstAccessPage_ButtonRecoveryMyWallet" xml:space="preserve">
 	    <value>Recovery My Wallet</value>
 	</data>
+	<data name="FirstAccessPage_ButtonOpenTermsOfService" xml:space="preserve">
+	    <value>Terms of Service</value>
+	</data>
+	<data name="FirstAccessPage_ButtonOpenGithub" xml:space="preserve">
+	    <value>Github</value>
+	</data>
+
+
 
 
 	<!-- CreateNewWalletPage -->

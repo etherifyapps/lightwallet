@@ -11,18 +11,28 @@ namespace Etherify.LightWallet.ViewModels
 	{
 		public DelegateCommand CreateNewWalletCommand { get; set; }
 		public DelegateCommand RecoveryMyWalletCommand { get; set; }
+		public DelegateCommand OpenTermsOfServiceCommand { get; set; }
+		public DelegateCommand OpenGithubCommand { get; set; }
+
 
 		public FirstAccessPageViewModel (INavigationService navigationService) : base(navigationService)
 		{
 			CreateNewWalletCommand = new DelegateCommand (() => {
-				var task = _navigationService.NavigateAsync (typeof(CreateNewWalletPage).Name);
-				task.Wait();
+				_navigationService.NavigateAsync (typeof(CreateNewWalletPage).Name);
 			});
 
 			RecoveryMyWalletCommand = new DelegateCommand (() => {
 				_navigationService.NavigateAsync (typeof(ConnectingEthereumPage).Name);
 			});
-			
+
+			OpenTermsOfServiceCommand = new DelegateCommand (() => {
+				//Do something
+			});
+
+			OpenGithubCommand = new DelegateCommand (() => {
+				//Do something
+			});
+
 		}
 
 		/*

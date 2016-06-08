@@ -30,6 +30,9 @@
 			<Style x:Key="defaultButtonStyle" TargetType="Button" BasedOn="{StaticResource baseButtonStyle}">
             	<Setter Property="BackgroundColor" Value="{DynamicResource accentColor}" />
         	</Style>
+			<Style x:Key="linkTextStyle" TargetType="Button">
+        	</Style>
+
 
         	<!-- Label Styles -->
 			<Style x:Key="baseLabelStyle" TargetType="Label">
@@ -60,6 +63,21 @@
             	<Setter Property="Padding" Value="5,5,5,5" />
             	<Setter Property="Spacing" Value="20" />
             </Style>
+			<Style x:Key="bottomStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
+            	<Setter Property="VerticalOptions" Value="EndAndExpand" />
+            	<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            	<Setter Property="Padding" Value="5,5,5,5" />
+            </Style>
+
+        	<!-- Grid Styles -->
+			<Style x:Key="baseGridStyle" TargetType="Grid">
+        	</Style>
+			<Style x:Key="bottomGridStyle" TargetType="Grid" BasedOn="{StaticResource baseGridStyle}">
+            	<Setter Property="VerticalOptions" Value="EndAndExpand" />
+            	<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            	<Setter Property="Padding" Value="20,0,20,10" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>
