@@ -16,7 +16,6 @@ namespace Etherify.LightWallet
 
 		protected override void OnInitialized ()
 		{
-			var x = new Button ();
 			if (Device.OS != TargetPlatform.WinPhone) {
 				DependencyService.Get<ILocalize> ().SetLocale ();
 			}

@@ -4,14 +4,14 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.FirstAccessPage">
-	<StackLayout VerticalOptions="FillAndExpand" Padding="0,20,0,0" BackgroundColor="Fuchsia">
-		<Label Style="{DynamicResource titleLabelStyle}" Text ="First Access Page"/>
-		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
-			Padding="5,20,5,5" Spacing="20"
-			BackgroundColor="Lime">
-	    	<Button Text="Create New Wallet" Command="{Binding CreateNewWalletCommand}" Style="{DynamicResource defaultButtonStyle}" />
-	    	<Button Text="Recovery My Wallet" Command="{Binding RecoveryMyWalletCommand}" Style="{DynamicResource buttonStyle}"/>
+	x:Class="Etherify.LightWallet.Views.FirstAccessPage"
+	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
+	<StackLayout Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="Fuchsia">
+		<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}"/>
+		<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
+		<StackLayout Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="Lime">
+	    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonCreateNewWallet}" Command="{Binding CreateNewWalletCommand}"  />
+	    	<Button Style="{DynamicResource buttonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonRecoveryMyWallet}"  Command="{Binding RecoveryMyWalletCommand}" />
 		</StackLayout>
 	</StackLayout>
 </ContentPage>

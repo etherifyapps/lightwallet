@@ -32,12 +32,34 @@
         	</Style>
 
         	<!-- Label Styles -->
-			<Style x:Key="titleLabelStyle" TargetType="Label">
+			<Style x:Key="baseLabelStyle" TargetType="Label">
             	<Setter Property="TextColor" Value="{DynamicResource primaryTextColor}" />
-            	<Setter Property="BackgroundColor" Value="{DynamicResource accentColor}" />
+            	<Setter Property="FontSize" Value="17" />
+        	</Style>
+			<Style x:Key="titleLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
             	<Setter Property="HorizontalOptions" Value="Center" />
+            	<Setter Property="FontAttributes" Value="Bold" />
+            	<Setter Property="FontSize" Value="24" />
+        	</Style>
+			<Style x:Key="subtitleLabelStyle" TargetType="Label" BasedOn="{StaticResource baseLabelStyle}">
+            	<Setter Property="HorizontalOptions" Value="Center" />
+            	<Setter Property="FontSize" Value="15" />
         	</Style>
 
+        	<!-- StackLayout Styles -->
+			<Style x:Key="baseStackLayoutStyle" TargetType="StackLayout">
+        	</Style>
+			<Style x:Key="externalStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
+            	<Setter Property="VerticalOptions" Value="FillAndExpand" />
+            	<Setter Property="Padding" Value="0,20,0,0" />
+        	</Style>
+
+			<Style x:Key="centralStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
+            	<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            	<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            	<Setter Property="Padding" Value="5,5,5,5" />
+            	<Setter Property="Spacing" Value="20" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

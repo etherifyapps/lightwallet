@@ -13,6 +13,22 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 
+	<!-- FirstAccessPage -->
+	<data name="FirstAccessPage_Title" xml:space="preserve">
+	    <value>Etherify</value>
+	</data>
+	<data name="FirstAccessPage_Subtitle" xml:space="preserve">
+	    <value>Sua Carteira Determinística para Ethereum</value>
+	</data>
+	<data name="FirstAccessPage_ButtonCreateNewWallet" xml:space="preserve">
+	    <value>Criar Nova Carteira</value>
+	</data>
+	<data name="FirstAccessPage_ButtonRecoveryMyWallet" xml:space="preserve">
+	    <value>Recuperar Minha Carteira</value>
+	</data>
+
+
+	<!-- CreateNewWalletPage -->
 	<data name="CreateNewWalletPage_Title" xml:space="preserve">
 	    <value>Criar Carteira Nova</value>
 	</data>
