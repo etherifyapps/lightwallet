@@ -6,7 +6,6 @@
     <Application.Resources>
 		<ResourceDictionary>
         	<Color x:Key="darkPrimaryColor">#512DA8</Color>
-
         	<Color x:Key="defaultPrimaryColor">#673AB7</Color>
         	<Color x:Key="lightPrimaryColor">#D1C4E9</Color>
         	<Color x:Key="textPrimaryColor">#FFFFFF</Color>
@@ -19,10 +18,26 @@
             	<Setter Property="BarTextColor" Value="{DynamicResource textPrimaryColor}" />
             	<Setter Property="BarBackgroundColor" Value="{DynamicResource defaultPrimaryColor}" />
         	</Style>
-			<Style x:Key="navigationPageStyle2" TargetType="NavigationPage">
-            	<Setter Property="BarTextColor" Value="{DynamicResource textPrimaryColor}" />
-            	<Setter Property="BarBackgroundColor" Value="{DynamicResource defaultPrimaryColor}" />
+
+        	<!-- Button Styles -->
+			<Style x:Key="baseButtonStyle" TargetType="Button">
+            	<Setter Property="TextColor" Value="{DynamicResource textPrimaryColor}" />
+            	<Setter Property="BorderColor" Value="{DynamicResource primaryTextColor}" />
         	</Style>
+			<Style x:Key="buttonStyle" TargetType="Button" BasedOn="{StaticResource baseButtonStyle}">
+            	<Setter Property="BackgroundColor" Value="{DynamicResource darkPrimaryColor}" />
+        	</Style>
+			<Style x:Key="defaultButtonStyle" TargetType="Button" BasedOn="{StaticResource baseButtonStyle}">
+            	<Setter Property="BackgroundColor" Value="{DynamicResource accentColor}" />
+        	</Style>
+
+        	<!-- Label Styles -->
+			<Style x:Key="titleLabelStyle" TargetType="Label">
+            	<Setter Property="TextColor" Value="{DynamicResource primaryTextColor}" />
+            	<Setter Property="BackgroundColor" Value="{DynamicResource accentColor}" />
+            	<Setter Property="HorizontalOptions" Value="Center" />
+        	</Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

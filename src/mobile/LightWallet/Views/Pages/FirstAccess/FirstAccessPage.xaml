@@ -5,9 +5,13 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.FirstAccessPage">
-	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-		<Label Text ="FirstAccessPage" />
-    	<Button Text="Create New Wallet" Command="{Binding CreateNewWalletCommand}" />
-    	<Button Text="Recovery My Wallet" Command="{Binding RecoveryMyWalletCommand}" />
+	<StackLayout VerticalOptions="FillAndExpand" Padding="0,20,0,0" BackgroundColor="Fuchsia">
+		<Label Style="{DynamicResource titleLabelStyle}" Text ="First Access Page"/>
+		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" 
+			Padding="5,20,5,5" Spacing="20"
+			BackgroundColor="Lime">
+	    	<Button Text="Create New Wallet" Command="{Binding CreateNewWalletCommand}" Style="{DynamicResource defaultButtonStyle}" />
+	    	<Button Text="Recovery My Wallet" Command="{Binding RecoveryMyWalletCommand}" Style="{DynamicResource buttonStyle}"/>
+		</StackLayout>
 	</StackLayout>
 </ContentPage>
