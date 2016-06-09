@@ -10,8 +10,8 @@ namespace Etherify.LightWallet.Base.ViewModels
 	{
 		public INavigationService _navigationService;
 
-		//public static bool setRandomBackgroundColorsToDebug = true;
-		public static bool setRandomBackgroundColorsToDebug = false;
+		public static bool setRandomBackgroundColorsToDebug = true;
+		//public static bool setRandomBackgroundColorsToDebug = false;
 		internal static int _nextDebugColorId;
 
 		public string DebugOnlyColor {

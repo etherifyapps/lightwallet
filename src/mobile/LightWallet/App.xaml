@@ -63,6 +63,11 @@
             	<Setter Property="Padding" Value="5,5,5,5" />
             	<Setter Property="Spacing" Value="20" />
             </Style>
+			<Style x:Key="topStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
+            	<Setter Property="VerticalOptions" Value="StartAndExpand" />
+            	<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            	<Setter Property="Padding" Value="5,5,5,5" />
+            </Style>
 			<Style x:Key="bottomStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
             	<Setter Property="VerticalOptions" Value="EndAndExpand" />
             	<Setter Property="HorizontalOptions" Value="FillAndExpand" />
@@ -76,6 +81,10 @@
             	<Setter Property="VerticalOptions" Value="EndAndExpand" />
             	<Setter Property="HorizontalOptions" Value="FillAndExpand" />
             	<Setter Property="Padding" Value="20,0,20,10" />
+            </Style>
+			<Style x:Key="externalGridStyle" TargetType="Grid" BasedOn="{StaticResource baseGridStyle}">
+            	<Setter Property="VerticalOptions" Value="FillAndExpand" />
+            	<Setter Property="Padding" Value="0,20,0,0" />
             </Style>
 
         </ResourceDictionary>

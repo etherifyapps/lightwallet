@@ -6,14 +6,29 @@
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.FirstAccessPage"
 	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
-	<StackLayout Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
-		<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}"/>
-		<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
-		<StackLayout Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+
+	<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+	    <Grid.RowDefinitions>
+	        <RowDefinition Height="Auto" />
+	        <RowDefinition Height="*"/>
+	        <RowDefinition Height="Auto" />
+	    </Grid.RowDefinitions>
+	    <Grid.ColumnDefinitions>
+	        <ColumnDefinition Width="*" />
+	    </Grid.ColumnDefinitions>
+
+	    <StackLayout Grid.Row="0" Grid.Column="0" Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+			<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}"/>
+			<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
+		</StackLayout>
+
+		<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 	    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonCreateNewWallet}" Command="{Binding CreateNewWalletCommand}"  />
 	    	<Button Style="{DynamicResource buttonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonRecoveryMyWallet}"  Command="{Binding RecoveryMyWalletCommand}" />
 		</StackLayout>
-		<Grid Style="{DynamicResource bottomGridStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+
+
+		<Grid Grid.Row="3" Grid.Column="0" Style="{DynamicResource bottomGridStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 		    <Grid.RowDefinitions>
 		        <RowDefinition Height="Auto" />
 		    </Grid.RowDefinitions>
@@ -32,6 +47,6 @@
 	    		HorizontalOptions="End"
 	    		Command="{Binding OpenGithubCommand}" />
 		</Grid>
+	</Grid>
 
-	</StackLayout>
 </ContentPage>
