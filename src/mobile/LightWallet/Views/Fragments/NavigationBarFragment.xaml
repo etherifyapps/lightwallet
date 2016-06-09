@@ -9,7 +9,7 @@
 	Orientation="Vertical" 
 	BackgroundColor="{DynamicResource defaultPrimaryColor}">
 
-	<views:iOSScreenTopSpacing/>
+	<views:iOSScreenTopSpacingFragment/>
 
 	<Grid>
 	    <Grid.RowDefinitions>

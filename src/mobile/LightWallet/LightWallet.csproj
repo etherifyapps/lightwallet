@@ -104,8 +104,8 @@
       <DependentUpon>TermsOfServicePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\Settings\TermsOfServicePageViewModel.cs" />
-    <Compile Include="Views\Fragments\iOSScreenTopSpacing.xaml.cs">
-      <DependentUpon>iOSScreenTopSpacing.xaml</DependentUpon>
+    <Compile Include="Views\Fragments\iOSScreenTopSpacingFragment.xaml.cs">
+      <DependentUpon>iOSScreenTopSpacingFragment.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -220,7 +220,7 @@
     <EmbeddedResource Include="Views\Pages\Settings\TermsOfServicePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Fragments\iOSScreenTopSpacing.xaml">
+    <EmbeddedResource Include="Views\Fragments\iOSScreenTopSpacingFragment.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

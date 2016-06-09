@@ -54,7 +54,7 @@
         	</Style>
 			<Style x:Key="externalStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
             	<Setter Property="VerticalOptions" Value="FillAndExpand" />
-            	<Setter Property="Padding" Value="0,20,0,0" />
+            	<Setter Property="Padding" Value="0,0,0,0" />
         	</Style>
 
 			<Style x:Key="centralStackLayoutStyle" TargetType="StackLayout" BasedOn="{StaticResource baseStackLayoutStyle}">
@@ -76,7 +76,7 @@
         	</Style>
 			<Style x:Key="externalGridStyle" TargetType="Grid" BasedOn="{StaticResource baseGridStyle}">
             	<Setter Property="VerticalOptions" Value="FillAndExpand" />
-            	<Setter Property="Padding" Value="0,20,0,0" />
+            	<Setter Property="Padding" Value="0,0,0,0" />
             </Style>
 			<Style x:Key="bottomGridStyle" TargetType="Grid" BasedOn="{StaticResource baseGridStyle}">
             	<Setter Property="VerticalOptions" Value="EndAndExpand" />

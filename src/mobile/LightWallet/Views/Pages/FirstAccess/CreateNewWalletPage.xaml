@@ -6,7 +6,7 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage"
-	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
+	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
 
     <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding defaultPrimaryColor}">
 		<views:NavigationBarFragment/>
@@ -23,16 +23,16 @@
 
 
 		    <StackLayout Grid.Row="0" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
-				<Label Style="{DynamicResource baseLabelStyle}" Text ="{lightwallet:Translate CreateNewWalletPage_Description}" />
+				<Label Style="{DynamicResource baseLabelStyle}" Text ="{extensions:Translate CreateNewWalletPage_Description}" />
 			</StackLayout>
 
 			<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
-				<Entry Placeholder="{lightwallet:Translate CreateNewWalletPage_Passphrase}" IsPassword="true"/>
-				<Entry Placeholder="{lightwallet:Translate CreateNewWalletPage_ConfirmPassphrase}"  IsPassword="true"/>
+				<Entry Placeholder="{extensions:Translate CreateNewWalletPage_Passphrase}" IsPassword="true"/>
+				<Entry Placeholder="{extensions:Translate CreateNewWalletPage_ConfirmPassphrase}"  IsPassword="true"/>
 			</StackLayout>
 
 		    <StackLayout Grid.Row="2" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
-		    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate CreateNewWalletPage_Next}" Command="{Binding NextCommand}"  />
+		    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{extensions:Translate CreateNewWalletPage_Next}" Command="{Binding NextCommand}"  />
 			</StackLayout>
 		</Grid>
 

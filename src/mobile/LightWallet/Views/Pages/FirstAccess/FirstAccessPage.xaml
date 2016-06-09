@@ -5,7 +5,9 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.FirstAccessPage"
-	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
+	xmlns:views="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
+	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
+
 
 	<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
 	    <Grid.RowDefinitions>
@@ -18,13 +20,14 @@
 	    </Grid.ColumnDefinitions>
 
 	    <StackLayout Grid.Row="0" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
-			<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}" />
-			<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
+			<views:iOSScreenTopSpacingFragment/>
+			<Label Style="{DynamicResource titleLabelStyle}" Text ="{extensions:Translate FirstAccessPage_Title}" />
+			<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{extensions:Translate FirstAccessPage_Subtitle}"/>
 		</StackLayout>
 
 		<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
-	    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonCreateNewWallet}" Command="{Binding CreateNewWalletCommand}"  />
-	    	<Button Style="{DynamicResource buttonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonRecoveryMyWallet}"  Command="{Binding RecoveryMyWalletCommand}" />
+	    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{extensions:Translate FirstAccessPage_ButtonCreateNewWallet}" Command="{Binding CreateNewWalletCommand}"  />
+	    	<Button Style="{DynamicResource buttonStyle}" Text="{extensions:Translate FirstAccessPage_ButtonRecoveryMyWallet}"  Command="{Binding RecoveryMyWalletCommand}" />
 		</StackLayout>
 
 	    <StackLayout Grid.Row="2" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
@@ -39,11 +42,11 @@
 			    </Grid.ColumnDefinitions>
 
 		    	<Button Grid.Row="0" Grid.Column="0" Style="{DynamicResource linkTextStyle}" 
-		    		Text="{lightwallet:Translate FirstAccessPage_ButtonOpenTermsOfService}" 
+		    		Text="{extensions:Translate FirstAccessPage_ButtonOpenTermsOfService}" 
 		    		HorizontalOptions="Start"
 		    		Command="{Binding OpenTermsOfServiceCommand}"  />
 		    	<Button Grid.Row="0" Grid.Column="2" Style="{DynamicResource linkTextStyle}" 
-		    		Text="{lightwallet:Translate FirstAccessPage_ButtonOpenGithub}"  
+		    		Text="{extensions:Translate FirstAccessPage_ButtonOpenGithub}"  
 		    		HorizontalOptions="End"
 		    		Command="{Binding OpenGithubCommand}" />
 			</Grid>
