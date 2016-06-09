@@ -33,16 +33,29 @@
 	    <value>Github</value>
 	</data>
 
-
-
-
 	<!-- CreateNewWalletPage -->
 	<data name="CreateNewWalletPage_Title" xml:space="preserve">
 	    <value>Create New Wallet</value>
 	</data>
+	<data name="CreateNewWalletPage_Description" xml:space="preserve">
+	    <value>Create New Wallet</value>
+	</data>
+	<data name="CreateNewWalletPage_Passphrase" xml:space="preserve">
+	    <value>Passphrase</value>
+	</data>
+	<data name="CreateNewWalletPage_ConfirmPassphrase" xml:space="preserve">
+	    <value>Confirm Passphrase</value>
+	</data>
+	<data name="CreateNewWalletPage_Next" xml:space="preserve">
+	    <value>Next</value>
+	</data>
+
+
+
+
+	<!-- AccountsPage -->
 	<data name="Button_SearchForExistentAccounts" xml:space="preserve">
 	    <value>Search for existent accounts</value>
 	</data>
-
 
 </root>

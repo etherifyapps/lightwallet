@@ -71,6 +71,8 @@
 
         	<!-- Grid Styles -->
 			<Style x:Key="baseGridStyle" TargetType="Grid">
+            	<Setter Property="RowSpacing" Value="0" />
+            	<Setter Property="ColumnSpacing" Value="0" />
         	</Style>
 			<Style x:Key="externalGridStyle" TargetType="Grid" BasedOn="{StaticResource baseGridStyle}">
             	<Setter Property="VerticalOptions" Value="FillAndExpand" />

@@ -4,8 +4,15 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="Etherify.LightWallet.Views.NavigationBarFragment"
 	VerticalOptions="Start" 
-	Orientation="Horizontal" 
+	Orientation="Vertical" 
 	BackgroundColor="{DynamicResource defaultPrimaryColor}">
-	<Button Text="Back" Command="{Binding BackCommand}" HorizontalOptions="Start"/>
-	<Label Text ="{Binding Title}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+	<BoxView HeightRequest="20">
+		<BoxView.IsVisible>
+    		<OnPlatform x:TypeArguments="x:Boolean" Android="false" iOS="true" />
+  		</BoxView.IsVisible>
+	</BoxView>
+	<StackLayout Orientation="Horizontal">
+		<Button Text="Back" Command="{Binding BackCommand}" HorizontalOptions="Start"/>
+		<Label Text ="{Binding Title}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+	</StackLayout>
 </StackLayout>

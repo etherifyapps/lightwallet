@@ -26,7 +26,7 @@ namespace Etherify.LightWallet.Base.ViewModels
 
 
 			//activate color visual
-			setRandomBackgroundColorsToDebug = true;
+			//setRandomBackgroundColorsToDebug = true;
 		}
 
 		public string DebugOnlyColor {

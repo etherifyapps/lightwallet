@@ -89,6 +89,30 @@ namespace Etherify.LightWallet {
             }
         }
         
+        public static string CreateNewWalletPage_Description {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_Description", resourceCulture);
+            }
+        }
+        
+        public static string CreateNewWalletPage_Passphrase {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_Passphrase", resourceCulture);
+            }
+        }
+        
+        public static string CreateNewWalletPage_ConfirmPassphrase {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_ConfirmPassphrase", resourceCulture);
+            }
+        }
+        
+        public static string CreateNewWalletPage_Next {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_Next", resourceCulture);
+            }
+        }
+        
         public static string Button_SearchForExistentAccounts {
             get {
                 return ResourceManager.GetString("Button_SearchForExistentAccounts", resourceCulture);

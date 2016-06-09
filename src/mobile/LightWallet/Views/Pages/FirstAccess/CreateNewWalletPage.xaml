@@ -5,21 +5,37 @@
 	xmlns:local="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage">
-	<StackLayout 
-		Orientation="Vertical" 
-		VerticalOptions="FillAndExpand" 
-		HorizontalOptions="Fill"
-		BackgroundColor="Gray">
+	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage"
+	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
 
+    <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding defaultPrimaryColor}">
 		<local:NavigationBarFragment/>
 
+		<Grid BackgroundColor="{DynamicResource DebugOnlyColor}" >
+		    <Grid.RowDefinitions>
+		        <RowDefinition Height="Auto"/>
+		        <RowDefinition Height="*"/>
+		        <RowDefinition Height="Auto" />
+		    </Grid.RowDefinitions>
+		    <Grid.ColumnDefinitions>
+		        <ColumnDefinition Width="*" />
+		    </Grid.ColumnDefinitions>
 
-		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" BackgroundColor="Aqua">
-			<Label Text ="Bla bla bla..." />
-			<Button Text="Back" Command="{Binding BackCommand}" />
-	    	<Button Text="Next" Command="{Binding NextCommand}" />
-		</StackLayout>
+
+		    <StackLayout Grid.Row="0" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+				<Label Style="{DynamicResource baseLabelStyle}" Text ="{lightwallet:Translate CreateNewWalletPage_Description}" />
+			</StackLayout>
+
+			<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
+				<Entry Placeholder="{lightwallet:Translate CreateNewWalletPage_Passphrase}" IsPassword="true"/>
+				<Entry Placeholder="{lightwallet:Translate CreateNewWalletPage_ConfirmPassphrase}"  IsPassword="true"/>
+			</StackLayout>
+
+		    <StackLayout Grid.Row="2" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+		    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate CreateNewWalletPage_Next}" Command="{Binding NextCommand}"  />
+			</StackLayout>
+		</Grid>
+
 	</StackLayout>
 
 
