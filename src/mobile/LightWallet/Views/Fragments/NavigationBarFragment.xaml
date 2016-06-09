@@ -3,15 +3,13 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="Etherify.LightWallet.Views.NavigationBarFragment"
+	xmlns:views="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
 	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
 	VerticalOptions="Start" 
 	Orientation="Vertical" 
 	BackgroundColor="{DynamicResource defaultPrimaryColor}">
-	<BoxView HeightRequest="15">
-		<BoxView.IsVisible>
-    		<OnPlatform x:TypeArguments="x:Boolean" Android="false" iOS="true" />
-  		</BoxView.IsVisible>
-	</BoxView>
+
+	<views:iOSScreenTopSpacing/>
 
 	<Grid>
 	    <Grid.RowDefinitions>

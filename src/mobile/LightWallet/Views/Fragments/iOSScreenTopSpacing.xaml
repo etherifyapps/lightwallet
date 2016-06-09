@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<BoxView 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="Etherify.LightWallet.Views.iOSScreenTopSpacing"
+	HeightRequest="15">
+	<BoxView.IsVisible>
+		<OnPlatform x:TypeArguments="x:Boolean" Android="false" iOS="true" />
+	</BoxView.IsVisible>
+</BoxView>

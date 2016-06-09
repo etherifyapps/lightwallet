@@ -2,16 +2,16 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	xmlns:local="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
+	xmlns:views="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage"
 	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
 
     <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding defaultPrimaryColor}">
-		<local:NavigationBarFragment/>
+		<views:NavigationBarFragment/>
 
-		<Grid BackgroundColor="{DynamicResource DebugOnlyColor}" >
+		<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{DynamicResource DebugOnlyColor}" >
 		    <Grid.RowDefinitions>
 		        <RowDefinition Height="Auto"/>
 		        <RowDefinition Height="*"/>
