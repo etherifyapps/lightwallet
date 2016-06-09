@@ -4,6 +4,7 @@ using Prism.Commands;
 using Prism.Navigation;
 using Etherify.LightWallet.Base.ViewModels;
 using Etherify.LightWallet.Views;
+using Xamarin.Forms;
 
 namespace Etherify.LightWallet.ViewModels
 {
@@ -26,11 +27,11 @@ namespace Etherify.LightWallet.ViewModels
 			});
 
 			OpenTermsOfServiceCommand = new DelegateCommand (() => {
-				//Do something
+				_navigationService.NavigateAsync (typeof(TermsOfServicePage).Name, useModalNavigation:true);
 			});
 
 			OpenGithubCommand = new DelegateCommand (() => {
-				//Do something
+				Device.OpenUri(new Uri("https://github.com/etherifyapps/lightwallet"));
 			});
 
 		}

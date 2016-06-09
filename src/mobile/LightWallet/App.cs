@@ -34,6 +34,7 @@ namespace Etherify.LightWallet
 		protected override void RegisterTypes ()
 		{
 			Container.RegisterTypeForNavigation<FirstAccessPage> ();
+			Container.RegisterTypeForNavigation<TermsOfServicePage> ();
 
 			Container.RegisterTypeForNavigation<CreateNewWalletPage> ();
 			Container.RegisterTypeForNavigation<ShowWalletMasterKeyPage> ();
