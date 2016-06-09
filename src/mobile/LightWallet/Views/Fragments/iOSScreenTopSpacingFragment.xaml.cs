@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Etherify.LightWallet.Views
 {
-	public partial class iOSScreenTopSpacing : BoxView
+	public partial class iOSScreenTopSpacingFragment : BoxView
 	{
-		public iOSScreenTopSpacing ()
+		public iOSScreenTopSpacingFragment ()
 		{
 			InitializeComponent ();
 		}

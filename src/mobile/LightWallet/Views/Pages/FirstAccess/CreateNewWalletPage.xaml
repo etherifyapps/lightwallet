@@ -8,10 +8,10 @@
 	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage"
 	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
 
-    <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding defaultPrimaryColor}">
+    <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 		<views:NavigationBarFragment/>
 
-		<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{DynamicResource DebugOnlyColor}" >
+		<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
 		    <Grid.RowDefinitions>
 		        <RowDefinition Height="Auto"/>
 		        <RowDefinition Height="*"/>

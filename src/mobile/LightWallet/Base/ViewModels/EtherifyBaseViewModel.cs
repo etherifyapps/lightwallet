@@ -23,10 +23,6 @@ namespace Etherify.LightWallet.Base.ViewModels
 				"Blue",
 				"Teal",
 			};
-
-
-			//activate color visual
-			//setRandomBackgroundColorsToDebug = true;
 		}
 
 		public string DebugOnlyColor {
@@ -34,13 +30,13 @@ namespace Etherify.LightWallet.Base.ViewModels
 			get {
 
 				if (!setRandomBackgroundColorsToDebug) {
-					//TODO: put to work the: 
+					//TODO: put the following line to work (I don't know why but Resources is null): 
 					//return Application.Current.Resources["lightPrimaryColor"].ToString();
-					return "#D1C4E9";
+
+					return "#D1C4E9"; //hotfix (temporary)
 				}
 
 				var color = _colors [_lastDebugColorId];
-
 
 				_lastDebugColorId++;
 				if (_lastDebugColorId >= _colors.Length)

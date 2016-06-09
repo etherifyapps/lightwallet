@@ -6,6 +6,7 @@ using Prism.Unity;
 
 using System.Reflection;
 using System.Resources;
+using Etherify.LightWallet.Base.ViewModels;
 
 namespace Etherify.LightWallet
 {
@@ -16,17 +17,22 @@ namespace Etherify.LightWallet
 
 		protected override void OnInitialized ()
 		{
+			if (System.Diagnostics.Debugger.IsAttached)
+			{
+				//used to visual test the area of each view
+				//EtherifyBaseViewModel.setRandomBackgroundColorsToDebug = true;
+			}
+
 			if (Device.OS != TargetPlatform.WinPhone) {
 				DependencyService.Get<ILocalize> ().SetLocale ();
 			}
 
-			//NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
-
-			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
-			NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
+			NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
 
 
 			//used to jump to some page (development)
+			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
+			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
 			//NavigationService.NavigateAsync ("MainMenuPage/AccountsNavigationPage/AccountsPage");
 			//NavigationService.NavigateAsync ("MainMenuPage/SettingsNavigationPage/SettingsPage");
 		}
