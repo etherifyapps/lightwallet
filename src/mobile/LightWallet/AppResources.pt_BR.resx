@@ -51,6 +51,11 @@
 	    <value>Avançar</value>
 	</data>
 
+	<!-- NavigationBarFragment -->
+	<data name="NavigationBarFragment_Back" xml:space="preserve">
+	    <value>Voltar</value>
+	</data>
+
 
 
 

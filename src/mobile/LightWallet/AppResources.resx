@@ -50,6 +50,10 @@
 	    <value>Next</value>
 	</data>
 
+	<!-- NavigationBarFragment -->
+	<data name="NavigationBarFragment_Back" xml:space="preserve">
+	    <value>Back</value>
+	</data>
 
 
 

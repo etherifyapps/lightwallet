@@ -3,16 +3,29 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="Etherify.LightWallet.Views.NavigationBarFragment"
+	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
 	VerticalOptions="Start" 
 	Orientation="Vertical" 
 	BackgroundColor="{DynamicResource defaultPrimaryColor}">
-	<BoxView HeightRequest="20">
+	<BoxView HeightRequest="15">
 		<BoxView.IsVisible>
     		<OnPlatform x:TypeArguments="x:Boolean" Android="false" iOS="true" />
   		</BoxView.IsVisible>
 	</BoxView>
-	<StackLayout Orientation="Horizontal">
-		<Button Text="Back" Command="{Binding BackCommand}" HorizontalOptions="Start"/>
-		<Label Text ="{Binding Title}" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-	</StackLayout>
+
+	<Grid>
+	    <Grid.RowDefinitions>
+	        <RowDefinition Height="Auto" />
+	    </Grid.RowDefinitions>
+	    <Grid.ColumnDefinitions>
+	        <ColumnDefinition Width="45" />
+	        <ColumnDefinition Width="*" />
+	        <ColumnDefinition Width="45" />
+	    </Grid.ColumnDefinitions>
+
+		<Button Grid.Row="0" Grid.Column="0" Text="{lightwallet:Translate NavigationBarFragment_Back}" Command="{Binding BackCommand}"
+			HorizontalOptions="Center" VerticalOptions="Center"/>
+		<Label Grid.Row="0" Grid.Column="1" Text ="{Binding Title}"
+			HorizontalOptions="Center" VerticalOptions="Center"/>
+	</Grid>
 </StackLayout>

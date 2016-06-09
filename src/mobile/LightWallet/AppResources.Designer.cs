@@ -113,6 +113,12 @@ namespace Etherify.LightWallet {
             }
         }
         
+        public static string NavigationBarFragment_Back {
+            get {
+                return ResourceManager.GetString("NavigationBarFragment_Back", resourceCulture);
+            }
+        }
+        
         public static string Button_SearchForExistentAccounts {
             get {
                 return ResourceManager.GetString("Button_SearchForExistentAccounts", resourceCulture);
