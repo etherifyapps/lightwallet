@@ -10,9 +10,24 @@ namespace Etherify.LightWallet.Base.ViewModels
 	{
 		public INavigationService _navigationService;
 
-		public static bool setRandomBackgroundColorsToDebug = true;
-		//public static bool setRandomBackgroundColorsToDebug = false;
-		internal static int _nextDebugColorId;
+		public static bool setRandomBackgroundColorsToDebug = false;
+		internal static string[] _colors;
+		internal static int _lastDebugColorId = 0;
+
+		static EtherifyBaseViewModel() {
+			_colors = new string[] {
+				"Fuchsia",
+				"Aqua",
+				"Lime",
+				"Red",
+				"Blue",
+				"Teal",
+			};
+
+
+			//activate color visual
+			setRandomBackgroundColorsToDebug = true;
+		}
 
 		public string DebugOnlyColor {
 			
@@ -24,21 +39,14 @@ namespace Etherify.LightWallet.Base.ViewModels
 					return "#D1C4E9";
 				}
 
-				//return a random color (actually rouding robing over a list)
-			
-				//TODO: refactor adding an array of collors
-				_nextDebugColorId++;
+				var color = _colors [_lastDebugColorId];
 
-				if (_nextDebugColorId > 3)
-					_nextDebugColorId = 1;
-				
-				if (_nextDebugColorId == 1)
-					return "Fuchsia";
 
-				if (_nextDebugColorId == 2)
-					return "Aqua";
+				_lastDebugColorId++;
+				if (_lastDebugColorId >= _colors.Length)
+					_lastDebugColorId = 0;
 
-				return "Lime";
+				return color;
 			}
 		}
 
