@@ -7,7 +7,7 @@
 	x:Class="Etherify.LightWallet.Views.FirstAccessPage"
 	xmlns:lightwallet="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
 
-	<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+	<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
 	    <Grid.RowDefinitions>
 	        <RowDefinition Height="Auto"/>
 	        <RowDefinition Height="*"/>
@@ -17,18 +17,24 @@
 	        <ColumnDefinition Width="*" />
 	    </Grid.ColumnDefinitions>
 
-	    <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="{Binding DebugOnlyColor}">
+	    <StackLayout Grid.Row="0" Grid.Column="0" BackgroundColor="{Binding DebugOnlyColor}" VerticalOptions="FillAndExpand">
 			<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}" />
 			<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
 		</StackLayout>
 
-		<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+		<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
 	    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonCreateNewWallet}" Command="{Binding CreateNewWalletCommand}"  />
 	    	<Button Style="{DynamicResource buttonStyle}" Text="{lightwallet:Translate FirstAccessPage_ButtonRecoveryMyWallet}"  Command="{Binding RecoveryMyWalletCommand}" />
 		</StackLayout>
 
 
-		<Grid Grid.Row="3" Grid.Column="0" Style="{DynamicResource bottomGridStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+	    <StackLayout Grid.Row="2" Grid.Column="0" BackgroundColor="{Binding DebugOnlyColor}" VerticalOptions="FillAndExpand">
+			<Label Style="{DynamicResource titleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Title}" />
+			<Label Style="{DynamicResource subtitleLabelStyle}" Text ="{lightwallet:Translate FirstAccessPage_Subtitle}"/>
+		</StackLayout>
+
+		<!--
+		<Grid Grid.Row="3" Grid.Column="0" Style="{DynamicResource bottomGridStyle}" BackgroundColor="{Binding DebugOnlyColor}" VerticalOptions="FillAndExpand">
 		    <Grid.RowDefinitions>
 		        <RowDefinition Height="Auto" />
 		    </Grid.RowDefinitions>
@@ -47,6 +53,7 @@
 	    		HorizontalOptions="End"
 	    		Command="{Binding OpenGithubCommand}" />
 		</Grid>
+		-->
 	</Grid>
 
 </ContentPage>
