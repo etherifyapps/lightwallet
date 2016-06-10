@@ -6,7 +6,8 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage"
-	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet">
+	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
+	xmlns:behavior="clr-namespace:Etherify.LightWallet.Behaviors;assembly=LightWallet">
 
     <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 		<views:NavigationBarFragment/>
@@ -27,12 +28,22 @@
 			</StackLayout>
 
 			<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
-				<Entry Placeholder="{extensions:Translate CreateNewWalletPage_Passphrase}" IsPassword="true"/>
-				<Entry Placeholder="{extensions:Translate CreateNewWalletPage_ConfirmPassphrase}"  IsPassword="true"/>
+				<Entry x:Name="password" Text="{Binding Password}" Placeholder="{extensions:Translate CreateNewWalletPage_Passphrase}" IsPassword="true">
+					<Entry.Behaviors>
+				        <behavior:PasswordValidationBehavior x:Name="passwordValidatorBehavior"  />   
+				    </Entry.Behaviors>
+				</Entry>
+				<Entry x:Name="confirmPassword" Text="{Binding ConfirmPassword}" Placeholder="{extensions:Translate CreateNewWalletPage_ConfirmPassphrase}"  IsPassword="true">
+					<Entry.Behaviors>
+				        <behavior:ConfirmPasswordBehavior x:Name="confirmPasswordBehavior" 
+				        	CompareToEntry="{Binding Source={x:Reference password}}"/>   
+				    </Entry.Behaviors>
+				</Entry>
 			</StackLayout>
 
 		    <StackLayout Grid.Row="2" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
-		    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{extensions:Translate CreateNewWalletPage_Next}" Command="{Binding NextCommand}"  />
+		    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{extensions:Translate CreateNewWalletPage_Next}" Command="{Binding NextCommand}"  
+			    	IsEnabled="{Binding Source={x:Reference confirmPasswordBehavior}, Path=IsValid}" />
 			</StackLayout>
 		</Grid>
 

@@ -15,12 +15,7 @@ namespace Etherify.LightWallet.Extensions
 
 		public object ProvideValue (IServiceProvider serviceProvider)
 		{
-			if (Text == null)
-				return "";
-
-			var translation = LocalizeService.GetString (Text) ?? Text; 
-
-			return translation;
+			return Text == null ? "" : LocalizeService.GetString (Text);
 		}
 	}
 }

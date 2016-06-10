@@ -5,6 +5,7 @@ using Prism.Navigation;
 using Etherify.LightWallet.Base.ViewModels;
 using Etherify.LightWallet.Views;
 using Xamarin.Forms;
+using Prism.Services;
 
 namespace Etherify.LightWallet.ViewModels
 {
@@ -44,7 +45,8 @@ namespace Etherify.LightWallet.ViewModels
 		}
 
 
-		public MainMenuPageViewModel (INavigationService navigationService) : base(navigationService)
+		public MainMenuPageViewModel (INavigationService navigationService, IPageDialogService dialogService) 
+			: base(navigationService, dialogService)
 		{
 			MenuItemsSource = new AppMenuItem[2];
 			MenuItemsSource [0] = new AppMenuItem () { 

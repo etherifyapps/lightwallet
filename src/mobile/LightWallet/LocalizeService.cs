@@ -39,7 +39,9 @@ namespace Etherify.LightWallet
 			}
 
 			var result = resourceManager.GetString (key);
-			return result;
+
+			//if result is null, return key (help developers to fix the problem)
+			return result ?? key;
 		}
 	}
 }

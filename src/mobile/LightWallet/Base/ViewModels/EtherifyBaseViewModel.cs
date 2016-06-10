@@ -3,12 +3,14 @@ using Prism.Mvvm;
 using Prism.Commands;
 using Prism.Navigation;
 using Xamarin.Forms;
+using Prism.Services;
 
 namespace Etherify.LightWallet.Base.ViewModels
 {
 	public class EtherifyBaseViewModel : BindableBase, INavigationAware
 	{
 		public INavigationService _navigationService;
+		public IPageDialogService _dialogService;
 
 		public static bool setRandomBackgroundColorsToDebug = false;
 		internal static string[] _colors;
@@ -48,9 +50,10 @@ namespace Etherify.LightWallet.Base.ViewModels
 
 		public static string BASE_NAVIGATION_URI = "MainMenuPage/DefaultNavigationPage/";
 
-		public EtherifyBaseViewModel (INavigationService navigationService)
+		public EtherifyBaseViewModel (INavigationService navigationService, IPageDialogService dialogService)
 		{
 			_navigationService = navigationService;
+			_dialogService = dialogService;
 		}
 
 		#region INavigationAware implementation

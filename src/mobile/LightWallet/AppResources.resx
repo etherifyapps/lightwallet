@@ -38,7 +38,7 @@
 	    <value>Create New Wallet</value>
 	</data>
 	<data name="CreateNewWalletPage_Description" xml:space="preserve">
-	    <value>Create New Wallet</value>
+	    <value>Type a password in order to protect your wallet keeping your private keys encrypted in your mobile phone. This password will be always required when you need to pay for something</value>
 	</data>
 	<data name="CreateNewWalletPage_Passphrase" xml:space="preserve">
 	    <value>Passphrase</value>
@@ -49,6 +49,16 @@
 	<data name="CreateNewWalletPage_Next" xml:space="preserve">
 	    <value>Next</value>
 	</data>
+	<data name="CreateNewWalletPage_PasswordFieldIsRequired" xml:space="preserve">
+	    <value>Password field is required!</value>
+	</data>
+	<data name="CreateNewWalletPage_PasswordMustHave8CharsOrMore" xml:space="preserve">
+	    <value>Password must have at least 8 letters!</value>
+	</data>
+	<data name="CreateNewWalletPage_ConfirmPasswordIsDifferent" xml:space="preserve">
+	    <value>Confirmation password doens't match!</value>
+	</data>
+
 
 	<!-- NavigationBarFragment -->
 	<data name="NavigationBarFragment_Back" xml:space="preserve">

@@ -5,6 +5,7 @@ using Prism.Navigation;
 using Etherify.LightWallet.Base.ViewModels;
 using Etherify.LightWallet.Views;
 using Xamarin.Forms;
+using Prism.Services;
 
 namespace Etherify.LightWallet.ViewModels
 {
@@ -16,7 +17,8 @@ namespace Etherify.LightWallet.ViewModels
 		public DelegateCommand OpenGithubCommand { get; set; }
 
 
-		public FirstAccessPageViewModel (INavigationService navigationService) : base(navigationService)
+		public FirstAccessPageViewModel (INavigationService navigationService, IPageDialogService dialogService) 
+			: base(navigationService, dialogService)
 		{
 			CreateNewWalletCommand = new DelegateCommand (() => {
 				_navigationService.NavigateAsync (typeof(CreateNewWalletPage).Name);

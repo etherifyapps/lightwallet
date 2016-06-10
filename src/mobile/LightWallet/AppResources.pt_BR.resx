@@ -39,7 +39,7 @@
 	    <value>Criar Nova Carteira</value>
 	</data>
 	<data name="CreateNewWalletPage_Description" xml:space="preserve">
-	    <value>Para criar uma nova carteira é necessário ...</value>
+	    <value>Forneça uma senha para que possamos manter sua cateira segura guardando suas chaves privadas critpografadas em seu smartphone. Esta senha será utilizada sempre que você for pagar algo.</value>
 	</data>
 	<data name="CreateNewWalletPage_Passphrase" xml:space="preserve">
 	    <value>Senha</value>
@@ -50,6 +50,16 @@
 	<data name="CreateNewWalletPage_Next" xml:space="preserve">
 	    <value>Avançar</value>
 	</data>
+	<data name="CreateNewWalletPage_PasswordFieldIsRequired" xml:space="preserve">
+	    <value>A Senha é obrigatória!</value>
+	</data>
+	<data name="CreateNewWalletPage_PasswordMustHave8CharsOrMore" xml:space="preserve">
+	    <value>A Senha deve ter pelo menos 8 letras!</value>
+	</data>
+	<data name="CreateNewWalletPage_ConfirmPasswordIsDifferent" xml:space="preserve">
+	    <value>As senhas digitadas não são iguais!</value>
+	</data>
+
 
 	<!-- NavigationBarFragment -->
 	<data name="NavigationBarFragment_Back" xml:space="preserve">

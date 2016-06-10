@@ -113,6 +113,24 @@ namespace Etherify.LightWallet {
             }
         }
         
+        public static string CreateNewWalletPage_PasswordFieldIsRequired {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_PasswordFieldIsRequired", resourceCulture);
+            }
+        }
+        
+        public static string CreateNewWalletPage_PasswordMustHave8CharsOrMore {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_PasswordMustHave8CharsOrMore", resourceCulture);
+            }
+        }
+        
+        public static string CreateNewWalletPage_ConfirmPasswordIsDifferent {
+            get {
+                return ResourceManager.GetString("CreateNewWalletPage_ConfirmPasswordIsDifferent", resourceCulture);
+            }
+        }
+        
         public static string NavigationBarFragment_Back {
             get {
                 return ResourceManager.GetString("NavigationBarFragment_Back", resourceCulture);
