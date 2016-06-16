@@ -8,6 +8,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
+using Prism.Unity;
+
 namespace Etherify.LightWallet.Droid
 {
 	[Activity (Label = "LightWallet.Droid", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -19,7 +21,7 @@ namespace Etherify.LightWallet.Droid
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 
-			LoadApplication (new App ());
+			LoadApplication(new App() as Xamarin.Forms.Application);
 		}
 	}
 }
