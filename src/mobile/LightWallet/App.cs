@@ -20,7 +20,7 @@ namespace Etherify.LightWallet
 			if (System.Diagnostics.Debugger.IsAttached)
 			{
 				//used to visual test the area of each view
-				EtherifyBaseViewModel.setRandomBackgroundColorsToDebug = true;
+				//EtherifyBaseViewModel.setRandomBackgroundColorsToDebug = true;
 			}
 
 			if (Device.OS != TargetPlatform.WinPhone) {

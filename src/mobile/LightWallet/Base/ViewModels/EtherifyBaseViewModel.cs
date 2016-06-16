@@ -35,7 +35,8 @@ namespace Etherify.LightWallet.Base.ViewModels
 					//TODO: put the following line to work (I don't know why but Resources is null): 
 					//return Application.Current.Resources["lightPrimaryColor"].ToString();
 
-					return "#D1C4E9"; //hotfix (temporary)
+					//return "#D1C4E9"; //hotfix (temporary)
+					return "#FFFFFF"; //hotfix (temporary)
 				}
 
 				var color = _colors [_lastDebugColorId];
