@@ -5,10 +5,12 @@
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.TermsOfServicePage">
-	<StackLayout Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+<!--		
+	<StackLayout x:Name="_stackLayout" Style="{DynamicResource externalStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 		<Label Style="{DynamicResource titleLabelStyle}" Text ="TermsOfServicePage" />
 		<StackLayout Style="{DynamicResource bottomStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 	    	<Button Style="{DynamicResource buttonStyle}" Text="Ok"  Command="{Binding OkCommand}"/>
 		</StackLayout>
 	</StackLayout>
+-->
 </ContentPage>

@@ -31,7 +31,8 @@ namespace Etherify.LightWallet
 
 
 			//used to jump to some page (development)
-			NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
+			NavigationService.NavigateAsync("FirstAccessPage/TermsOfServicePage");
+			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
 			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
 			//NavigationService.NavigateAsync ("MainMenuPage/AccountsNavigationPage/AccountsPage");
 			//NavigationService.NavigateAsync ("MainMenuPage/SettingsNavigationPage/SettingsPage");
