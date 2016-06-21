@@ -132,6 +132,22 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Localize.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTML\dist\lightwallet.js" />
+    <Content Include="HTML\lib\encryption.js" />
+    <Content Include="HTML\lib\keystore.js" />
+    <Content Include="HTML\lib\signing.js" />
+    <Content Include="HTML\lib\txutils.js" />
+    <Content Include="HTML\lib\upgrade.js" />
+    <Content Include="HTML\node_modules\async\dist\async.min.js" />
+    <Content Include="HTML\node_modules\hooked-web3-provider\build\hooked-web3-provider.min.js" />
+    <Content Include="HTML\node_modules\web3\dist\web3.min.js" />
+    <Content Include="HTML\etherify.js" />
+    <Content Include="HTML\index.html" />
+    <Content Include="HTML\index.js" />
+    <Content Include="HTML\test_etherify.html" />
+    <Content Include="HTML\webwallet-example.html" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
 </Project>

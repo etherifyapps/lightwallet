@@ -1,0 +1,52 @@
+<!--
+	https://github.com/ConsenSys/eth-lightwallet
+-->
+
+<html>
+
+<head>
+    <title>Etherify Wallet</title>
+
+    <script type="text/javascript">
+        function debug(text) {
+            document.getElementById('debug').innerHTML += text + '\n';
+        }
+
+        window.onerror = function (msg, url, line, col, error) {
+            // Note that col and error are new to the HTML 5 spec and may not be 
+            // supported in every browser.  It worked for me in Chrome.
+
+            var extra = !col ? '' : '\ncolumn: ' + col;
+            extra += !error ? '' : '\nerror: ' + error;
+
+            debug("Error: " + msg + "\n\nurl: " + url + "\n\nline: " + line + extra);
+
+            var suppressErrorAlert = true;
+
+            // If you return true, then error alerts (like in older versions of 
+            // Internet Explorer) will be suppressed.
+            return suppressErrorAlert;
+        };
+    </script>
+
+    <script src="./dist/lightwallet.min.js"></script>
+    <script type="text/javascript" src="./node_modules/web3/dist/web3.min.js"></script>
+    <script type="text/javascript" src="./node_modules/hooked-web3-provider/build/hooked-web3-provider.min.js"></script>
+    <script type="text/javascript" src="./node_modules/async/dist/async.min.js"></script>
+
+    <script src="etherify.js"></script>
+
+</head>
+
+<body>
+    <h1>Testando HTML Forms.WebView</h1>
+    <input type="button" value="createRandom12Words() CALLBACK" onclick="Etherify.Eth.createRandom12Words()">
+    <br/>
+    <br/>
+    <pre>
+        <div id="debug"></div>
+    </pre>
+
+</body>
+
+</html>

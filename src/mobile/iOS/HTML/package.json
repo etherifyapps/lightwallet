@@ -1,0 +1,103 @@
+{
+  "name": "eth-lightwallet",
+  "version": "2.3.2",
+  "description": "A lightweight ethereum javascript wallet.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConsenSys/eth-lightwallet.git"
+  },
+  "scripts": {
+    "build-js": "browserify index.js --s lightwallet | uglifyjs -c > dist/lightwallet.min.js",
+    "build-dev": "browserify index.js -o dist/lightwallet.js --s lightwallet",
+    "test": "mocha --reporter spec",
+    "coverage": "istanbul cover _mocha -- -R spec; open coverage/lcov-report/index.html"
+  },
+  "keywords": [
+    "ethereum",
+    "blockchain",
+    "transactions",
+    "contracts",
+    "wallet"
+  ],
+  "contributors": [
+    {
+      "name": "Christian Lundkvist",
+      "email": "christian.lundkvist@gmail.com"
+    },
+    {
+      "name": "Tyler Clark",
+      "email": "tysclark@gmail.com"
+    },
+    {
+      "name": "Joel Torstensson",
+      "email": "me@joeltorstensson.se"
+    },
+    {
+      "name": "Zach Ferland",
+      "email": "zachferland@gmail.com"
+    },
+    {
+      "name": "Kevin Jiao",
+      "email": "kevin.jiao@berkeley.edu"
+    },
+    {
+      "name": "Marian Oancea",
+      "email": "marian.oancea@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bignumber.js": "github:debris/bignumber.js#94d7146671b9719e00a09c29b01a691bc85048c2",
+    "bitcore-lib": "^0.13.13",
+    "bitcore-mnemonic": "^1.0.1",
+    "crypto-js": "^3.1.5",
+    "elliptic": "^3.1.0",
+    "ethereumjs-tx": "^1.1.1",
+    "ethereumjs-util": "^4.3.1",
+    "rlp": "^2.0.0",
+    "scrypt-async": "^1.2.0",
+    "tweetnacl": "0.13.2",
+    "web3": "^0.15.3"
+  },
+  "devDependencies": {
+    "async": "^1.4.2",
+    "bluebird": "^3.3.1",
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "istanbul": "^0.3.15",
+    "mocha": "^2.2.5",
+    "uglify-js": "^2.4.23",
+    "hooked-web3-provider": "github:christianlundkvist/hooked-web3-provider#updates_web3_14"
+  },
+  "gitHead": "4f0017c31b4f41872d966390ef797efb90ba8dc1",
+  "bugs": {
+    "url": "https://github.com/ConsenSys/eth-lightwallet/issues"
+  },
+  "homepage": "https://github.com/ConsenSys/eth-lightwallet#readme",
+  "_id": "eth-lightwallet@2.3.2",
+  "_shasum": "daf7f70ad9bd832645fb0b6322add2e05d05260f",
+  "_from": "eth-lightwallet@*",
+  "_npmVersion": "2.15.0",
+  "_nodeVersion": "4.4.2",
+  "_npmUser": {
+    "name": "chrislundkvist",
+    "email": "christian.lundkvist@gmail.com"
+  },
+  "dist": {
+    "shasum": "daf7f70ad9bd832645fb0b6322add2e05d05260f",
+    "tarball": "https://registry.npmjs.org/eth-lightwallet/-/eth-lightwallet-2.3.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "chrislundkvist",
+      "email": "christian.lundkvist@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/eth-lightwallet-2.3.2.tgz_1462458485735_0.8792629167437553"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/eth-lightwallet/-/eth-lightwallet-2.3.2.tgz"
+}
