@@ -2,12 +2,40 @@
 <ContentPage 
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:views="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
+	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
+	xmlns:behavior="clr-namespace:Etherify.LightWallet.Behaviors;assembly=LightWallet"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
 	x:Class="Etherify.LightWallet.Views.ShowWalletMasterKeyPage">
-	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-		<Label Text ="ShowWalletMasterKeyPage" />
-		<Button Text="Back" Command="{Binding BackCommand}" />
-    	<Button Text="CreateWallet"  Command="{Binding CreateWalletCommand}"/>
+
+    <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+		<views:NavigationBarFragment/>
+
+		<Grid Style="{DynamicResource externalGridStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
+		    <Grid.RowDefinitions>
+		        <RowDefinition Height="Auto"/>
+		        <RowDefinition Height="*"/>
+		        <RowDefinition Height="Auto" />
+		    </Grid.RowDefinitions>
+		    <Grid.ColumnDefinitions>
+		        <ColumnDefinition Width="*" />
+		    </Grid.ColumnDefinitions>
+
+
+		    <StackLayout Grid.Row="0" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+				<Label Style="{DynamicResource baseLabelStyle}" Text ="{extensions:Translate ShowWalletMasterKeyPage_Description}" />
+			</StackLayout>
+
+			<StackLayout Grid.Row="1" Grid.Column="0" Style="{DynamicResource centralStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}" >
+				<Label Style="{DynamicResource baseLabelStyle}" Text ="TODO: Exibir Masterkey" />
+			</StackLayout>
+
+		    <StackLayout Grid.Row="2" Grid.Column="0" Style="{DynamicResource fillStackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
+		    	<Button Style="{DynamicResource defaultButtonStyle}" Text="{extensions:Translate ShowWalletMasterKeyPage_Create}" 
+						Command="{Binding CreateWalletCommand}" />
+			</StackLayout>
+		</Grid>
+
 	</StackLayout>
 </ContentPage>

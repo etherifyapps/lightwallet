@@ -3,11 +3,11 @@
 	xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:views="clr-namespace:Etherify.LightWallet.Views;assembly=LightWallet"
+	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
+	xmlns:behavior="clr-namespace:Etherify.LightWallet.Behaviors;assembly=LightWallet"
 	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
 	prism:ViewModelLocator.AutowireViewModel="True"
-	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage"
-	xmlns:extensions="clr-namespace:Etherify.LightWallet.Extensions;assembly=LightWallet"
-	xmlns:behavior="clr-namespace:Etherify.LightWallet.Behaviors;assembly=LightWallet">
+	x:Class="Etherify.LightWallet.Views.CreateNewWalletPage">
 
     <StackLayout Style="{DynamicResource externalStyackLayoutStyle}" BackgroundColor="{Binding DebugOnlyColor}">
 		<views:NavigationBarFragment/>

@@ -27,11 +27,11 @@ namespace Etherify.LightWallet
 				DependencyService.Get<ILocalize> ().SetLocale ();
 			}
 
-			NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
+			//NavigationService.NavigateAsync (typeof(FirstAccessPage).Name);
 
 
 			//used to jump to some page (development)
-			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
+			NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage");
 			//NavigationService.NavigateAsync ("FirstAccessPage/CreateNewWalletPage/ShowWalletMasterKeyPage/WelcomeNewWalletPage");
 			//NavigationService.NavigateAsync ("MainMenuPage/AccountsNavigationPage/AccountsPage");
 			//NavigationService.NavigateAsync ("MainMenuPage/SettingsNavigationPage/SettingsPage");

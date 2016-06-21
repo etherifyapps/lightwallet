@@ -19,6 +19,9 @@ namespace Etherify.LightWallet.iOS
 			Xamarin.Calabash.Start();
 			#endif
 
+			//TODO: check if this can be done in forms using styles
+			//UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.Default, false);
+
 			LoadApplication (new App () as Xamarin.Forms.Application);
 
 			return base.FinishedLaunching (app, options);

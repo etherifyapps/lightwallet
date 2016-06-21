@@ -22,8 +22,8 @@
 	    </Grid.ColumnDefinitions>
 
 		<Button Grid.Row="0" Grid.Column="0" Text="{lightwallet:Translate NavigationBarFragment_Back}" Command="{Binding BackCommand}"
-			HorizontalOptions="Center" VerticalOptions="Center"/>
+			HorizontalOptions="Center" VerticalOptions="Center" TextColor="{DynamicResource textPrimaryColor}" />
 		<Label Grid.Row="0" Grid.Column="1" Text ="{Binding Title}"
-			HorizontalOptions="Center" VerticalOptions="Center"/>
+			HorizontalOptions="Center" VerticalOptions="Center" TextColor="{DynamicResource textPrimaryColor}" />
 	</Grid>
 </StackLayout>
